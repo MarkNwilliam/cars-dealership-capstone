@@ -9,7 +9,7 @@
 /coverage
 
 # production
-/build
+# /build (removed: build dir is committed so Django serves the compiled React app)
 
 # misc
 .DS_Store
