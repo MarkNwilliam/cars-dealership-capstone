@@ -1,28 +1,41 @@
 GitHub Actions CI/CD Pipeline - Successful Run
 ==============================================
 
-Workflow:        CI/CD Pipeline
+Workflow:        CI/CD Pipeline (.github/workflows/ci.yml)
 Trigger:         push to main
 Run ID:          31099708953
 Run URL:         https://github.com/MarkNwilliam/cars-dealership-capstone/actions/runs/31099708953
 Result:          SUCCESS (both jobs)
 
-JOBS
-----
-  1. Backend tests (Django)   -> success
-  2. Frontend build (React)   -> success
+=====================================================================
+Job 1: Backend tests (Django)    runs-on: ubuntu-latest  -> success
+=====================================================================
+Steps executed:
+  1. Set up job                         success
+  2. Run actions/checkout@v4            success
+  3. Run actions/setup-python@v5        success
+  4. Install dependencies               success
+     $ pip install -r requirements.txt
+  5. Django system check                success
+     System check identified no issues (0 silenced).
+  6. Run Django tests                   success
+     Ran 3 tests in 0.020s
+     OK
+     Populate complete: 7 makes, 21 models
 
-BACKEND JOB - Django system check:
-  System check identified no issues (0 silenced).
+=====================================================================
+Job 2: Frontend build (React)    runs-on: ubuntu-latest  -> success
+=====================================================================
+Steps executed:
+  1. Set up job                         success
+  2. Run actions/checkout@v4            success
+  3. Run actions/setup-node@v4          success
+  4. Install npm dependencies           success
+     $ npm install
+  5. Build React app                    success
+     $ npm run build
+     Compiled successfully.
+     The build folder is ready to be deployed.
 
-BACKEND JOB - Django tests:
-  Ran 3 tests in 0.020s
-  OK
-  Populate complete: 7 makes, 21 models
-
-FRONTEND JOB - React build:
-  Compiling...
-  The build folder is ready to be deployed.
-  Compiled successfully.
-
+RESULT: All steps completed successfully.
 (Full logs: https://github.com/MarkNwilliam/cars-dealership-capstone/actions/runs/31099708953)
