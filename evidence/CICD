@@ -1,0 +1,28 @@
+GitHub Actions CI/CD Pipeline - Successful Run
+==============================================
+
+Workflow:        CI/CD Pipeline
+Trigger:         push to main
+Run ID:          31099708953
+Run URL:         https://github.com/MarkNwilliam/cars-dealership-capstone/actions/runs/31099708953
+Result:          SUCCESS (both jobs)
+
+JOBS
+----
+  1. Backend tests (Django)   -> success
+  2. Frontend build (React)   -> success
+
+BACKEND JOB - Django system check:
+  System check identified no issues (0 silenced).
+
+BACKEND JOB - Django tests:
+  Ran 3 tests in 0.020s
+  OK
+  Populate complete: 7 makes, 21 models
+
+FRONTEND JOB - React build:
+  Compiling...
+  The build folder is ready to be deployed.
+  Compiled successfully.
+
+(Full logs: https://github.com/MarkNwilliam/cars-dealership-capstone/actions/runs/31099708953)
