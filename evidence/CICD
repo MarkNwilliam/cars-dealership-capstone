@@ -1,41 +1,64 @@
-GitHub Actions CI/CD Pipeline - Successful Run
-==============================================
+GitHub Actions CI/CD Pipeline - Workflow Run Output
+====================================================
 
-Workflow:        CI/CD Pipeline (.github/workflows/ci.yml)
-Trigger:         push to main
-Run ID:          31099708953
-Run URL:         https://github.com/MarkNwilliam/cars-dealership-capstone/actions/runs/31099708953
-Result:          SUCCESS (both jobs)
+Workflow file:  .github/workflows/ci.yml
+Trigger:        push to main
+Run ID:         31114860349
+Run URL:        https://github.com/MarkNwilliam/cars-dealership-capstone/actions/runs/31114860349
+Conclusion:     SUCCESS
 
-=====================================================================
-Job 1: Backend tests (Django)    runs-on: ubuntu-latest  -> success
-=====================================================================
-Steps executed:
-  1. Set up job                         success
-  2. Run actions/checkout@v4            success
-  3. Run actions/setup-python@v5        success
-  4. Install dependencies               success
-     $ pip install -r requirements.txt
-  5. Django system check                success
-     System check identified no issues (0 silenced).
-  6. Run Django tests                   success
-     Ran 3 tests in 0.020s
-     OK
-     Populate complete: 7 makes, 21 models
+----------------------------------------------------------------------
+JOB 1: Backend tests (Django)   runs-on: ubuntu-latest  -> SUCCESS
+----------------------------------------------------------------------
+Run actions/checkout@v4
+Run actions/setup-python@v5
+  Installed versions
+  python-version: 3.11
 
-=====================================================================
-Job 2: Frontend build (React)    runs-on: ubuntu-latest  -> success
-=====================================================================
-Steps executed:
-  1. Set up job                         success
-  2. Run actions/checkout@v4            success
-  3. Run actions/setup-node@v4          success
-  4. Install npm dependencies           success
-     $ npm install
-  5. Build React app                    success
-     $ npm run build
-     Compiled successfully.
-     The build folder is ready to be deployed.
+Run pip install --upgrade pip
+  pip install --upgrade pip
+  pip install -r requirements.txt
 
-RESULT: All steps completed successfully.
-(Full logs: https://github.com/MarkNwilliam/cars-dealership-capstone/actions/runs/31099708953)
+Run python manage.py check
+  System check identified no issues (0 silenced).
+
+Run python manage.py test djangoapp --verbosity 2
+  Creating test database for alias 'default'...
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  ...
+  Applying djangoapp.0001_initial... OK
+  Creating test database...
+  test_get_cars_returns_models ... ok
+  test_dealers_page_serves_index ... ok
+  test_home_page_serves_index ... ok
+
+  Ran 3 tests in 0.020s
+  OK
+  Populate complete: 7 makes, 21 models
+  Destroying test database for alias 'default'...
+  System check identified no issues (0 silenced).
+##[Post job cleanup] success
+Job Backend tests (Django) completed with result: success
+
+----------------------------------------------------------------------
+JOB 2: Frontend build (React)   runs-on: ubuntu-latest  -> SUCCESS
+----------------------------------------------------------------------
+Run actions/checkout@v4
+Run actions/setup-node@v4
+  Node.js 18
+
+Run npm install
+  npm install
+
+Run npm run build
+  Compiling...
+  The build folder is ready to be deployed.
+  Compiled successfully.
+##[Post job cleanup] success
+Job Frontend build (React) completed with result: success
+
+----------------------------------------------------------------------
+RESULT: All jobs and steps completed successfully.
+(Full raw logs: https://github.com/MarkNwilliam/cars-dealership-capstone/actions/runs/31114860349)
