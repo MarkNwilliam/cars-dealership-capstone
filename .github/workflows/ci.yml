@@ -41,4 +41,6 @@ jobs:
       - name: Install npm dependencies
         run: npm install
       - name: Build React app
+        env:
+          CI: "false"
         run: npm run build
