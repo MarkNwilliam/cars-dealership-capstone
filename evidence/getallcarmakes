@@ -1,0 +1,90 @@
+$ curl http://localhost:8000/djangoapp/get_cars
+
+{
+    "CarModels": [
+        {
+            "CarMake": "Toyota",
+            "CarModel": "Camry"
+        },
+        {
+            "CarMake": "Toyota",
+            "CarModel": "Corolla"
+        },
+        {
+            "CarMake": "Toyota",
+            "CarModel": "RAV4"
+        },
+        {
+            "CarMake": "Honda",
+            "CarModel": "Civic"
+        },
+        {
+            "CarMake": "Honda",
+            "CarModel": "Accord"
+        },
+        {
+            "CarMake": "Honda",
+            "CarModel": "CR-V"
+        },
+        {
+            "CarMake": "Ford",
+            "CarModel": "Mustang"
+        },
+        {
+            "CarMake": "Ford",
+            "CarModel": "F-150"
+        },
+        {
+            "CarMake": "Ford",
+            "CarModel": "Explorer"
+        },
+        {
+            "CarMake": "BMW",
+            "CarModel": "3 Series"
+        },
+        {
+            "CarMake": "BMW",
+            "CarModel": "X5"
+        },
+        {
+            "CarMake": "BMW",
+            "CarModel": "M4"
+        },
+        {
+            "CarMake": "Mercedes-Benz",
+            "CarModel": "C-Class"
+        },
+        {
+            "CarMake": "Mercedes-Benz",
+            "CarModel": "E-Class"
+        },
+        {
+            "CarMake": "Mercedes-Benz",
+            "CarModel": "GLE"
+        },
+        {
+            "CarMake": "Audi",
+            "CarModel": "A4"
+        },
+        {
+            "CarMake": "Audi",
+            "CarModel": "Q5"
+        },
+        {
+            "CarMake": "Audi",
+            "CarModel": "RS5"
+        },
+        {
+            "CarMake": "Chevrolet",
+            "CarModel": "Malibu"
+        },
+        {
+            "CarMake": "Chevrolet",
+            "CarModel": "Equinox"
+        },
+        {
+            "CarMake": "Chevrolet",
+            "CarModel": "Camaro"
+        }
+    ]
+}

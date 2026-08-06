@@ -1,0 +1,18 @@
+$ python3 manage.py runserver 0.0.0.0:8000
+
+(Django development server startup + request log)
+
+Watching for file changes with StatReloader
+
+[06/Aug/2026 11:50:13] "GET /manifest.json HTTP/1.1" 200 652
+[06/Aug/2026 11:50:13] "GET /djangoapp/get_dealers HTTP/1.1" 200 12500
+[06/Aug/2026 11:50:13] "GET /favicon.ico HTTP/1.1" 200 652
+[06/Aug/2026 11:51:25] "POST /djangoapp/login HTTP/1.1" 200 51
+[06/Aug/2026 11:51:25] "GET /djangoapp/logout HTTP/1.1" 200 16
+[06/Aug/2026 11:51:32] "POST /djangoapp/login HTTP/1.1" 200 51
+[06/Aug/2026 11:51:32] "GET /djangoapp/logout HTTP/1.1" 200 16
+[06/Aug/2026 11:51:32] "GET /djangoapp/get_cars HTTP/1.1" 200 946
+[06/Aug/2026 11:51:32] "GET /djangoapp/get_dealers HTTP/1.1" 200 12500
+[06/Aug/2026 11:51:51] "GET /djangoapp/get_dealers/Kansas HTTP/1.1" 200 271
+[06/Aug/2026 11:51:52] "GET /djangoapp/dealer/15 HTTP/1.1" 200 278
+[06/Aug/2026 11:51:52] "GET /djangoapp/reviews/dealer/15 HTTP/1.1" 200 865
